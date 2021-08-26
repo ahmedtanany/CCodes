@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	char character;
+	int result;
+	setvbuf(stdout,NULL,_IONBF,0);
+	setvbuf(stderr,NULL,_IONBF,0);
+	printf("Enter a Character: ");
+	scanf("%s",&character);
+	result = (int)character;
+	printf("Ascii of %c is %d",character,result);
+}
