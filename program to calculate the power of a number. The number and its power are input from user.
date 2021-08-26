@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	setvbuf(stdout,NULL,_IONBF,0);
+	setvbuf(stderr,NULL,_IONBF,0);
+	int num,power;
+	int result = 1;
+	printf("Enter the number and the power: ");
+	scanf("%d %d",&num,&power);
+	if (power == 0)
+	{
+		result = 1;
+	}
+	else
+	{
+		for (int i = 0; i< power; i++)
+		{
+			result *=num;
+		}
+	}
+	printf("The power %d of %d is : %d",power,num,result);
+}
