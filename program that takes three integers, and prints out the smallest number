@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	setvbuf(stdout,NULL,_IONBF,0);
+	setvbuf(stderr,NULL,_IONBF,0);
+	int num1,num2,num3,result;
+	printf("Enter First number: ");
+	scanf("%d",&num1);
+	printf("Enter Second number: ");
+	scanf("%d",&num2);
+	printf("Enter Third number: ");
+	scanf("%d",&num3);
+	result = num1;
+	if(num2<result)
+	{
+		result = num2;
+	}
+	if(num3 < result)
+	{
+		result = num3;
+	}
+	printf("\nThe smallest value of these three numbers are: %d",result);
+}
