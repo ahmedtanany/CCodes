@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	setvbuf(stdout,NULL,_IONBF,0);
+	setvbuf(stderr,NULL,_IONBF,0);
+	int num1;
+	int counter = 2;
+	printf("Enter the number: ");
+	scanf("%d",&num1);
+	if (num1 == 1)
+	{
+		printf("Number %d is not prime",num1);
+	}
+	for (int i = 2;i<num1;i++)
+	{
+		if((num1 % i) == 0)
+		{
+			printf("Number %d is not prime",num1);
+			break;
+		}
+		else
+		{
+			counter ++;
+		}
+	}
+	if((counter==(num1)) || (num1 == 2))
+	{
+		printf("Number %d is prime",num1);
+	}
+	return 0;
+}
