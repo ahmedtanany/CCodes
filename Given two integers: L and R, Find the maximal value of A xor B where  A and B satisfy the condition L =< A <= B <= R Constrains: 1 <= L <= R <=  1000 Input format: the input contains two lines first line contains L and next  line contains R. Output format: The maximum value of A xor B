@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+void calc_xor(int a , int b)
+{
+	int result = 0;
+	int p_1=0;
+	int p_2=0;
+	for(int i = a ; i <b;i++)
+	{
+		for(int j = a ; j<b ; j++ )
+		{
+			if(result < (i^j))
+			{
+				result = i^j;
+				p_1 = i;
+				p_2 =j;
+			}
+		}
+	}
+	printf("The max xor is %d and pair are (%d,%d)",result,p_1,p_2);
+}
+int main()
+{
+	setvbuf(stdout,NULL,_IONBF,0);
+	setvbuf(stderr,NULL,_IONBF,0);
+	int l,r;
+	printf("Enter L and R: ");
+	scanf("%d %d",&l,&r);
+	calc_xor(l,r);
+	return 0;
+}
